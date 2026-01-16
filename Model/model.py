@@ -1,8 +1,8 @@
 from torch.nn import Module, Conv2d, MaxPool2d, Flatten, Linear, ReLU, Softmax
 import torch.nn.functional as F
-import torch
+import torch.nn as nn
 
-class ClassifierCNN:
+class ClassifierCNN(nn.Module):
     def __init__(self):
         super(ClassifierCNN, self).__init__()
         self.conv1 = Conv2d(in_channels= 3, out_channels = 16, kernel_size= 3, padding = 1 ) # Input: 3 x 128 x 128, Output: 16 x 128 x 128
