@@ -1,5 +1,5 @@
-from Data_Preparation import train_loader
-from Model import ClassifierCNN
+from Data_Preparation.data_preparation import train_loader
+from Model.model import ClassifierCNN
 import tqdm
 from torch.nn import CrossEntropyLoss
 from torch.optim import SGD
@@ -24,4 +24,4 @@ def train_model(model, train_loader, epochs=10):
         print(f"Epoch [{epoch+1}/{epochs}], Loss: {train_loss/len(train_loader):.4f}")
 
 model = ClassifierCNN()
-train_model(model, train_loader, epochs=10)
+train_model(model, train_loader)
