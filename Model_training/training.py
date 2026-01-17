@@ -1,6 +1,6 @@
 from Data_Preparation.data_preparation import train_loader
 from Model.model import ClassifierCNN
-import tqdm
+from tqdm import tqdm
 from torch.nn import CrossEntropyLoss
 from torch.optim import SGD
 
@@ -11,9 +11,9 @@ def train_model(model, train_loader, epochs=10):
     criterion = CrossEntropyLoss()
     optimizer = SGD(model.parameters(), lr=0.001)   
     model.train()
-    bar = tqdm(train_loader)
     for epoch in range(epochs):
         train_loss = 0.0
+        bar = tqdm(train_loader)
         for batch, labels in bar:
             optimizer.zero_grad()
             logits = model(batch)
