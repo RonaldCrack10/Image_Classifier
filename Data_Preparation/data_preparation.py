@@ -21,7 +21,7 @@ data_tranform = transforms.Compose([
 
 # Loader creation
 
-dataset = datasets.ImageFolder(root = folder_path, transforms = data_tranform)
+dataset = datasets.ImageFolder(root = folder_path, transform = data_tranform)
 dataloader = DataLoader(dataset, batch_size = 32, shuffle = True)
 
 # Training and validation split
@@ -30,6 +30,6 @@ val_size = len(dataset) - train_size
 
 train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
 train_loader = DataLoader(train_dataset, batch_size = 32, shuffle = True)
-test_loader = DataLoader(val_dataset, batch_size = 32, shuffle_size = True)
+test_loader = DataLoader(val_dataset, batch_size = 32, shuffle = True)
 
 
