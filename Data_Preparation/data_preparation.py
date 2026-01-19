@@ -15,7 +15,7 @@ cats_path = os.path.join(folder_path, 'cats')
 dogs_path = os.path.join(folder_path, 'dogs')
 
 data_tranform = transforms.Compose([
-    transforms.Resize((128, 128)),
+    transforms.Resize(size=(128, 128)),
     transforms.ToTensor()
 ])
 
