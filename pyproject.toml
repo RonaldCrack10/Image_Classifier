@@ -9,9 +9,16 @@ description = "Image classifier with CNN"
 authors = [{name = "Ronald Batchewoua", email = "ronaldbatch11@gmail.com"}]
 dependencies = [
     "requests",  
-    "pytoch",
+    "pytorch",
     "torch",
-    "tqdm"
+    "tqdm",
+    "Model",
+    "Dataset", 
+    "Metrics", 
+    "Tensorboard", 
+    "Model_testing", 
+    "Model_training", 
+    "Data_Preparation"
 
 ]
 
