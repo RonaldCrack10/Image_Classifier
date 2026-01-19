@@ -3,9 +3,9 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "Image Classifier with CNN"
+name = "Image_Classifier"
 version = "0.1.0"
-description = ""
+description = "Image classifier with CNN"
 authors = [{name = "Ronald Batchewoua", email = "ronaldbatch11@gmail.com"}]
 dependencies = [
     "requests",  
